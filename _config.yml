@@ -1,0 +1,3 @@
+destination: ./_site
+pygments: true
+permalink: pretty

@@ -1,0 +1,11 @@
+---
+layout: default
+title: Test Post using Github pages with Jekyll
+---
+
+h3. {{ page.title }}
+
+{% highlight python %}
+def test(*args, **kwargs):
+    pass
+{% endhighlight %}

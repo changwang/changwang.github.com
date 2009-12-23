@@ -1,0 +1,47 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
+<head>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    <title>{{ page.title }}</title>
+    <meta name="author" content="chang wang" />
+    <link rel="alternate" href="#" type="application/atom+xml" title="Chang Wang" />
+    <link rel="stylesheet" href="/css/default.css" type="text/css" media="screen" charset="utf-8" />
+    <link rel="stylesheet" href="/css/syntax.css" type="text/css" />
+</head>
+
+<body>
+    <div id="wrapper">
+        <div id="header">
+            <h1><a href="/">CHANG(昌)'s Notes</a></h1>
+            <ul>
+                <li class="first"><a href="/">HOME</a></li>
+                <li class="first"><a href="#">PROJECT</a></li>
+                <li class="first"><a href="#">ABOUT</a></li>
+            </ul>
+        </div>
+    </div>
+    
+    <div id="content">
+        <div id="colOne">
+            {{ content }}
+        </div>
+        
+        <div id="colTwo">
+            <h3>Recent Update</h3>
+            <ul>
+                {% for page in site.posts limit: 3%}
+                    <li class="first"><a href="{{ page.url }}">{{ page.title }}</a></li>
+                {% endfor %}
+            </ul>
+            <h3>Tags</h3>
+            <p>Github Jekyll Python Django Rails</p>
+        </div>
+    </div>
+
+    <div id="footer">
+        <p>(c) 2009 Chang Wang. Design by <a href="http://www.freecsstemplates.org/" target="_blank">Free CSS Templates</a>.</p>
+    </div>
+</body>
+</html>
